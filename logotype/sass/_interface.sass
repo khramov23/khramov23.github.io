@@ -1,0 +1,103 @@
+$active: #ffc222
+
+*
+  box-sizing: border-box
+*:after, *:before
+  box-sizing: border-box
+
+ul, li
+  margin: 0
+  padding: 0
+  list-style: none  
+
+.container
+  width: 1170px
+  margin: 0 auto
+  padding: 0 15px
+
+.default-btn
+  position: relative
+  text-align: center
+  padding: 14px 20px 14px 21px
+  border: 1px solid $active
+  border-right: 21px solid $active
+  background-color: transparent
+  font-weight: 500
+  letter-spacing: 0.35px
+  color: #ffffff
+  cursor: pointer
+  transition: all 0.2s
+  outline: none
+  &:after
+    content: "\f054"
+    font-family: 'icomoon'
+    position: absolute
+    right: -15px
+    top: 50%
+    transform: translateY(-50%)
+  &:hover
+    border-color: darken($active, 10)
+
+.section
+  padding-top: 50px
+  padding-bottom: 40px
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__box
+    max-width: 524px
+    padding-left: 140px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 12px
+      width: 106px
+      height: 2px
+      background-color: $active
+  &__title
+    margin-top: 0
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 14px
+  &__subtitle
+    line-height: 18px
+    letter-spacing: 0.14px
+    color: #5e5e5e
+    font-family: "PT Serif" 
+  &__button
+    padding: 10px 40px
+    border: 3px solid #e6e6e6
+    background-color: transparent
+    cursor: pointer
+    transition: all 0.2s
+    &:hover
+      border-color: darken(#e6e6e6, 20)
+
+.slick-arrow
+  width: 40px
+  height: 40px
+  border: 1px solid #ffffff
+  background-color: $active
+  position: absolute
+  cursor: pointer
+  z-index: 2
+  outline: none
+  &:after
+    font-family: 'Icomoon'
+    color: #ffffff
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.slick-prev
+  &:after
+    content: "\f053"
+.slick-next
+  &:after
+    content: "\f054"
+.slick-disabled
+  cursor: default
+  background-color: transparent

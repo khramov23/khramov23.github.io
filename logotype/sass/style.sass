@@ -1,0 +1,484 @@
+body
+  font-family: 'Roboto', sans-serif
+  font-size: 14px
+  overflow-x: hidden
+  // font-family: 'PT Serif', serif
+
+@import 'interface'
+
+.header
+  &-top
+    background-color: #303030
+    max-height: 45px
+    &__inner
+      display: flex
+      justify-content: space-between
+.header__phone, .header__email, .contacts__phone, .contacts__email, .contacts__adress
+  display: inline-block
+  line-height: 45px
+  font-size: 16px
+  padding: 0 35px 0 25px
+  color: #d3d2d2
+  position: relative
+.header__phone:before,
+.contacts__phone:before
+  content: "\f095"
+  position: absolute
+  left: 0
+  color: $active
+  font-family: 'icomoon'
+.header__email:before,
+.contacts__email:before
+  content: "\f003"
+  position: absolute
+  left: 0
+  color: $active
+  font-family: 'icomoon'
+.header__button, .contacts__button, .modal__button
+  position: relative
+  display: inline-block
+  outline: none
+  text-decoration: none
+  font-size: 16px
+  border: none
+  background-color: $active
+  padding: 15px 21px 12px 48px
+  cursor: pointer
+  transition: all 0.3s
+  color: #323232
+.header__button:hover,
+.contacts__button:hover
+    background-color: darken($active, 10)
+.header__button:before,
+.contacts__button:before
+    content: "\f0b1"
+    font-family: 'icomoon'
+    position: absolute
+    left: 22px
+    color: #1b1b1b
+
+.nav
+  padding: 38px 0 32px
+  &__burger
+    display: none
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__item
+    display: inline-block
+  &__link
+    display: block
+    padding: 10px 20px
+    margin-left: 10px
+    text-decoration: none
+    font-size: 16px
+    color: #323233
+    border: 1px solid transparent
+    transition: all 0.3s
+    &:hover
+      border-color: $active 
+
+.main
+  background: url(../img/main-bg.jpg) no-repeat center
+  background-size: cover
+  min-height: 497px
+  text-align: center
+  padding-top: 129px
+  &__title
+    margin-bottom: 24px
+    color: #ffffff
+    letter-spacing: 1.5px
+    font-size: 30px
+    font-weight: 500
+    line-height: 36px
+  &__subtitle
+    padding: 0 200px
+    margin-bottom: 47px
+    color: #d3d2d2
+    font-family: "PT Serif"
+    font-size: 18px
+    line-height: 24px
+  &__item
+    outline: none
+  .slick-arrow
+    top: 60%
+  .slick-prev
+    left: 0
+  .slick-next
+    right: 0
+
+.service
+  &-list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 67px
+  &__item
+    position: relative
+    max-width: 360px
+    min-height: 363px
+    text-align: center
+    box-shadow: 0 7px 24px 3px rgba(91, 89, 89, 0.14)
+    background-color: #f9f9f9
+    &-img
+      display: block
+      margin: 0 auto
+      margin-top: 24px
+    &-title
+      margin-top: 20px
+      margin-bottom: 28px
+      font-size: 18px
+      font-weight: 500
+      color: #212020
+    &-desc
+      color: #5e5e5e
+      font-family: "PT Serif"
+      line-height: 18px
+      letter-spacing: 0.14px
+      padding-left: 34px
+      padding-right: 34px
+    &-buttons
+      position: absolute
+      bottom: 40px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      padding: 0 37px
+      .default-btn
+        color: #373636
+        &:after
+          color: #ffffff
+    &-link
+      color: #050505
+      
+.about
+  background: url(../img/about-bg.jpg) no-repeat center
+  background-size: cover
+  &__title
+    padding-top: 37px
+    margin-bottom: 34px
+    font-size: 24px
+    font-weight: 500
+    color: #ffffff
+  &__desc
+    max-width: 560px
+    color: #d3d2d2
+    font-family: "PT Serif"
+    line-height: 24px
+    margin-bottom: 37px
+    letter-spacing: 0.14px
+  &__button
+    margin-bottom: 47px
+    &:after
+      color: #303030
+
+.advice
+  padding-bottom: 0
+  &-wrapper
+    background: url(../img/woman.png) no-repeat right bottom 
+
+.form
+  margin-top: 40px
+  padding-bottom: 42px
+  max-width: 800px  
+  display: flex
+  input, select, textarea
+    background-color: transparent
+    display: block
+    outline: none
+    width: 100%
+    height: 40px
+    border: 1px solid #e6e6e6
+    padding: 0 20px
+  &-left
+    max-width: 264px
+    label
+      display: block
+      color: #282828
+      margin-top: 10px
+      line-height: 36px
+      .select
+        position: relative
+        select
+          appearance: none
+          cursor: pointer
+        &:after
+          content: "\f054"
+          font-family: 'Icomoon'
+          z-index: 3
+          pointer-events: none
+          position: absolute
+          transform: rotate(90deg)
+          right: 18px
+          top: 3px
+  &-right
+    position: relative
+    margin-left: 27px
+    label
+      display: block
+      line-height: 36px
+      color: #282828
+      margin: 10px 0
+      textarea
+        padding: 10px
+        display: block
+        min-width: 557px
+        min-height: 195px
+        resize: none
+  &__button
+    position: absolute
+    bottom: 0
+    right: 0
+    color: #282828
+
+.features
+  min-height: 286px
+  background: url(../img/features-bg.jpg) no-repeat center
+  background-size: cover
+  padding: 55px 0 41px 0
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__item
+    position: relative
+    max-width: 320px
+    padding-top: 65px
+    text-align: center
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      width: 40px
+      height: 40px
+      border: 2px solid $active
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+    &:before
+      content: "\f00c"
+      font-family: 'Icomoon'
+      position: absolute
+      top: 14px
+      left: 50%
+      transform: translateX(-50%)
+      color: #ffffff
+    &-title
+      font-size: 18px
+      color: #ffffff
+      line-height: 24px
+    &-subtitle
+      margin-top: 23px
+      color: #d3d2d2
+      font-family: "PT Serif"
+      line-height: 24px
+      letter-spacing: 0.14px
+
+.news
+  padding-bottom: 109px
+  background-color: #f9f9f9
+  &__content
+    margin-top: 47px
+    display: flex
+    justify-content: space-between
+  &__slider
+    max-width: 554px
+    box-shadow: 0 5px 15px 1px rgba(128, 127, 127, 0.13)
+    background-color: #ffffff
+  .slick-arrow
+    right: 0
+    bottom: -65px
+    border: 1px solid $active
+  .slick-prev
+    right: 50px
+  .slick-disabled
+    border: 1px solid #dadada
+    &::after
+      color: #908e8e
+  &__slide
+    padding: 62px 37px 47px 69px
+    position: relative
+    outline: none
+    &:before
+      content: ''
+      width: 65px
+      height: 31px
+      background-color: $active
+      position: absolute
+      top: 0
+      left: 69px
+    &:after
+      content: "\f10e"
+      font-family: 'Icomoon'
+      position: absolute
+      color: #ffffff
+      font-size: 16px
+      letter-spacing: 0.8px
+      top: 8px
+      left: 94px
+    &-title
+      margin-bottom: 19px
+      color: #242424
+      font-size: 18px
+      line-height: 24px
+      letter-spacing: 0.9px
+    &-text
+      color: #5e5e5e
+      font-family: "PT Serif"
+      line-height: 18px
+      letter-spacing: 0.14px
+      margin-bottom: 37px
+    &-author
+      color: #212020
+      line-height: 18px
+      letter-spacing: 0.14px
+  &__block
+    max-width: 262px
+    position: relative
+    &:after
+      content: '03.04'
+      width: 47px
+      height: 54px
+      background-color: $active
+      position: absolute
+      left: 10px
+      top: 0
+      color: #ffffff
+      font-weight: 500
+      text-align: center
+      padding-top: 32px
+      font-family: "PT Serif"
+    &-title
+      margin-top: 20px
+      margin-bottom: 17px
+      color: #242424
+      font-size: 16px
+      font-weight: 500
+      line-height: 18px
+      letter-spacing: 0.8px
+    &-desc
+      color: #5e5e5e
+      font-family: "PT Serif"
+      line-height: 18px
+      letter-spacing: 0.14px
+
+.contacts
+  padding: 29px 0 47px
+  background-color: #595959
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__block
+    max-width: 380px
+    &:after
+      content: ''
+      clear: both
+      display: block
+  &__header
+    color: #ffffff
+    font-size: 16px
+    font-weight: 500
+    line-height: 36px
+    letter-spacing: 0.8px
+    margin-bottom: 20px
+  &__desc
+    color: #d3d2d2
+    font-weight: 400
+    line-height: 18px
+    margin-bottom: 27px
+  &__button
+    display: block
+    float: left
+    margin-bottom: 27px
+  &__adress:before
+    content: "\f041"
+    position: absolute
+    left: 0
+    color: $active
+    font-family: 'icomoon'
+  &__map
+    iframe
+      min-width: 632px
+      min-height: 251px
+
+.footer
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 45px
+  background-color: #303030
+  color: #ddd
+  font-size: 12px
+  line-height: 24px
+  letter-spacing: 0.6px
+
+// Модальное окно
+.modal
+  z-index: 6
+  width: 450px
+  height: 490px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: #ffffff
+  border-radius: 10px
+  padding: 25px 50px 15px 50px
+  &__close
+    width: 40px
+    height: 40px
+    position: absolute
+    top: 15px
+    right: 15px
+    cursor: pointer
+    span
+      display: block
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 100%
+      height: 1px
+      background: #333333
+      transform: rotate(45deg)
+      &:last-child
+        transform: rotate(135deg)
+  &-inner
+    display: none
+    content: ''
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(#000, 0.7)
+    z-index: 5
+  &__title
+    text-align: center
+    text-transform: uppercase
+    font-size: 28px
+  &__input
+    background-color: transparent
+    display: block
+    outline: none
+    width: 100%
+    height: 40px
+    border: 1px solid #e6e6e6
+    padding: 0 20px
+  &__label
+    display: block
+    margin-top: 20px
+    color: #282828
+    line-height: 36px
+  &__button
+    padding-left: 21px
+    float: none
+    display: block
+    margin: 30px auto 0 auto
+    &:hover
+      background-color: darken($active, 10)
+
+@import 'media'
