@@ -1,0 +1,76 @@
+.deal
+  background: url(../../img/deal/deal-bg.jpg) center
+  background-size: cover
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__header
+    color: $active
+    font-weight: 700
+    font-size: 48px
+    text-transform: uppercase
+  &__subtitle
+    margin-top: 80px
+    font-size: 24px
+    line-height: 40px
+  .timer
+    width: 260px
+    margin-top: 80px
+    padding: 20px
+    background-color: #ffffff
+    border-radius: 10px
+    border: 1px solid #d1d1d1
+    &__title
+      display: block
+      text-transform: uppercase
+      font-weight: 700
+      text-align: center
+    &-blocks
+      display: flex
+      justify-content: space-around
+      margin-top: 20px
+    &-block
+      text-align: center
+    &-number
+      position: relative
+      span
+        position: absolute
+        top: 18%
+        left: 12%
+        font-size: 28px
+        color: #ffffff
+        font-weight: 700
+
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .deal
+    background: url(../../img/deal/deal-bg.jpg) 26% center
+    &-left
+      margin-left: 20px
+    &__header
+      margin-top: 10px
+      margin-bottom: 10px
+    &__subtitle
+      margin-top: 25px
+    .timer
+      margin-top: 35px
+    &-banner
+      display: none
+
+// Малые девайсы
+@media (min-width: 576px) and (max-width: 767.98px)
+  .deal
+    background: url(../../img/deal/deal-bg.jpg) 26% center
+    &-left
+      margin-left: 20px
+    &__header
+      margin-top: 10px
+      margin-bottom: 10px
+    &__subtitle
+      margin-top: 25px
+    .timer
+      margin-top: 35px
+    &-banner
+      display: none

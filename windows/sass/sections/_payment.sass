@@ -1,0 +1,53 @@
+.payment
+  &__header
+    text-transform: none
+    &:after
+      display: none
+  &-blocks
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-block 
+    display: flex
+    flex-basis: 33.3%
+    justify-content: center
+    align-items: center
+    font-size: 20px
+    &__text
+      margin-left: 30px
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .payment
+    &-block
+      font-size: 16px
+      &__text
+        margin-left: 20px
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .payment
+    &-block
+      display: block
+      &__img
+        display: block
+        margin: 0 auto
+      &__text
+        margin-left: 0
+        margin-top: 20px
+        display: block
+        text-align: center 
+
+// Малые девайсы
+@media (min-width: 576px) and (max-width: 767.98px)
+  .payment
+    &-block
+      display: block
+      &__img
+        display: block
+        margin: 0 auto
+      &__text
+        margin-left: 0
+        margin-top: 20px
+        display: block
+        text-align: center 

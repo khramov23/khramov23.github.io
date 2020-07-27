@@ -1,0 +1,31 @@
+.footer
+  padding: 40px 0
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__copyright
+    font-size: 15px
+    line-height: 20px
+  &-contacts
+    text-align: right
+    &__phone
+      display: block
+      margin-bottom: 12px
+      font-size: 18px
+      font-weight: 700
+      color: #333333
+      text-decoration: none
+    &__mail
+      color: $active
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .footer
+    padding: 20px
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .footer
+    padding: 10px
+      

@@ -1,0 +1,46 @@
+.adress
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-block
+    flex-basis: 40%
+    margin-bottom: 40px
+    margin-left: 120px
+    font-weight: 700
+    &__title
+      font-size: 15px
+      color: $active
+    &__desc
+      display: block
+      font-size: 18px
+      margin-top: 15px
+      line-height: 26px
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .adress
+    &-wrap
+      justify-content: space-around
+    &-block
+      margin-left: 40px
+      margin-bottom: 20px
+    &__title
+      font-size: 14px
+    &__desc
+      margin-top: 10px 
+      font-size: 16px
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .adress
+    &-wrap
+      justify-content: space-around
+    &-block
+      margin-left: 40px
+      margin-bottom: 15px
+    &__title
+      font-size: 14px
+    &__desc
+      margin-top: 8px 
+      font-size: 16px

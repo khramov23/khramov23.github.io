@@ -1,0 +1,55 @@
+.portfolio
+  &-blocks
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  &-block
+    position: relative
+    flex-basis: 20%
+    margin-top: 20px
+    cursor: pointer
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 99%
+      border-radius: 12px
+      transition: all 0.2s
+      background-color: rgba(#000, 0.0)
+    &:hover
+      &:after
+        background-color: rgba(#000, 0.2)
+    &__icon
+      position: absolute
+      left: 50%
+      top: 50%
+      margin-top: -20px
+      margin-left: -20px
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .portfolio
+    &-blocks
+      justify-content: space-around
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .portfolio
+    &-block
+      flex-basis: 40%
+      margin-top: 50px
+      &__img
+        width: 100%
+      
+
+// Малые девайсы
+@media (min-width: 576px) and (max-width: 767.98px)
+  .portfolio
+    &-blocks
+      justify-content: space-around
+      flex-basis: 40%
+      &__img
+        width: 100%

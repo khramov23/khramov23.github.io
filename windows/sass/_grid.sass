@@ -1,0 +1,26 @@
+// body, html
+  // overflow-x: hidden
+
+.container
+  max-width: 1170px
+  margin: 0 auto
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .container
+    max-width: 960px
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .container
+    max-width: 720px
+
+// Малые девайсы
+@media (min-width: 576px) and (max-width: 767.98px)
+  .container
+    max-width: 540px
+
+// Экстрамалые девайсы
+@media (max-width: 575.98px)
+  .container
+    max-width: auto

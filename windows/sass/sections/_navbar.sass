@@ -1,0 +1,102 @@
+.navbar
+  &-wrap
+    min-height: 105px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__desc
+    margin-left: -30px
+    color: $active
+  &-button
+    display: flex
+    background-color: transparent
+    cursor: pointer
+    padding: 13px 15px
+    border-radius: 10px
+    border: 2px solid #55a831
+    &:focus
+      outline: none
+    &__text 
+      display: block
+      text-align: left
+      margin-left: 10px
+      color: #55a831
+      font-weight: 700
+  &-worktime
+    display: flex
+    align-items: center
+    &__text
+      margin-left: 20px
+    &__weekends
+      color: #aaa
+    &__day
+      font-size: 18px
+      font-weight: 700
+  &-phone
+    display: flex
+    align-items: flex-start
+    &__icon
+      margin-top: 5px
+    &__block
+      margin-left: 15px
+    &__number
+      display: block
+      font-size: 23px
+      font-weight: 700
+    &__btn
+      margin-top: 5px
+      color: $active
+      text-decoration: underline
+      border: none
+      background-color: transparent
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .navbar-button
+    display: none
+
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .navbar
+    &-button
+      display: none
+  .navbar
+    &-worktime
+      display: none
+
+// Малые девайсы
+@media (min-width: 576px) and (max-width: 767.98px)
+  .navbar
+    &-button
+      display: none
+    &-worktime
+      display: none
+    &__desc
+      display: none
+    &-phone
+      &__number
+        font-size: 20px
+    
+
+// Экстрамалые девайсы
+@media (max-width: 575.98px)
+  .navbar
+    padding-top: 15px
+    &-wrap
+      flex-direction: column
+    &-button
+      display: none
+    &-worktime
+      display: none
+    &__desc
+      display: none
+    &-phone
+      transform: translateY(-20px)
+      &__number
+        font-size: 20px
+      &__btn
+        display: none
+    
+
+  

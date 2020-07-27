@@ -1,0 +1,74 @@
+.hero
+  background: url(../../img/hero/hero-bg.jpg) center
+  background-size: cover
+  padding: 100px 0 
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &-info
+    &__title
+      font-size: 26px
+    &__subtitle
+      display: block
+      font-weight: 700
+      font-size: 55px
+  &-features
+    display: flex
+    margin-top: 135px
+    align-items: center
+    justify-content: space-around
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .hero
+    &-info
+      &__title
+        font-size: 24px
+      &__subtitle
+        font-size: 50px
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .hero
+    padding: 80px
+    background-position: 25% center
+    &-info
+      &__title
+        font-size: 24px
+      &__subtitle
+        font-size: 50px
+    &-banner
+      display: none
+        
+
+// Малые девайсы
+@media (min-width: 576px) and (max-width: 767.98px)
+  .hero
+    padding: 40px
+    background-position: -20% center
+    &-features
+      margin-top: 40px
+    &-info
+      &__title
+        font-size: 24px
+      &__subtitle
+        font-size: 50px
+    &-banner
+      display: none
+
+// Экстрамалые девайсы
+@media (max-width: 575.98px)
+  .hero
+    text-align: center
+    padding: 50px
+    background-position: -5% center
+    &-info
+      &__title
+        font-size: 24px
+      &__subtitle
+        font-size: 50px
+    &-features
+      margin-top: 30px
+      &__img
+    &-banner
+      display: none

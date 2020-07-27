@@ -1,0 +1,181 @@
+.decor
+  background-color: #f7f7f7
+  &-items
+    display: flex
+    align-items: center
+    list-style: none
+    padding-left: 0
+    margin-bottom: 40px
+  &-item
+    position: relative
+    flex: auto
+    padding-top: 20px
+    padding-bottom: 20px
+    cursor: pointer
+    text-align: center
+    font-size: 20px
+    color: #000000
+    text-transform: uppercase
+    &:first-child
+      &:before
+        display: none
+    span
+      border-bottom: 1px dotted #000
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      background-image: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%)
+      opacity: 0.05
+      display: block
+      height: 100%
+      width: 2px
+    &_active
+      border-top: 10px solid $active
+      background-image: linear-gradient(to bottom, #eee 0%, rgba(0, 0, 0, 0) 100%)
+      font-weight: 700
+      color: $active
+      &:before
+        display: none
+      span
+        border-bottom: none
+      &:after
+        content: ''
+        position: absolute
+        top: -5px
+        left: 50%
+        display: block
+        margin-left: -5px
+        transform: rotate(45deg)
+        width: 10px
+        height: 10px
+        background-color: $active
+
+.panel
+  height: 500px
+  display: flex
+  align-items: center
+  &__img
+    flex-basis: 25%
+    display: none
+    &_active
+      display: block
+  &-features
+    flex-basis: 50%
+    margin-left: 50px
+    flex-wrap: wrap
+    display: none
+    &__title
+      flex-basis: 100%
+    &_active
+      display: flex
+  &-price
+    margin-top: 30px
+    flex-basis: 100%
+  &-feature
+    flex-basis: 33.3%
+    text-align: center
+    margin-top: 25px
+    margin-bottom: 25px
+    &_second
+      flex-basis: 20%
+    &_third
+      display: flex
+      flex-basis: 100%
+      align-items: center
+    &__desc
+      margin-left: 25px
+      text-align: left
+    &__price
+      color: $active
+      font-weight: 700
+      display: block
+    &__color
+      display: block
+      margin-top: 15px
+      font-size: 12px
+      color: #000000
+  &-banner
+    flex-basis: 25%
+    
+
+// Большие девайсы
+@media (min-width: 992px) and (max-width: 1199.98px)
+  .panel
+    &-banner
+      display: none
+    &__img
+      flex-basis: 30%
+    &-features
+      flex-basis: 70%
+    &-price
+      flex-basis: 50%
+      span
+        font-size: 20px
+    &-feature
+      &_third
+        flex-basis: 50%
+
+// Средние девайсы
+@media (min-width: 768px) and (max-width: 991.98px)
+  .panel
+    height: 400px
+    &-banner
+      display: none
+    &__img
+      flex-basis: 30%
+    &-features
+      flex-basis: 70%
+    &-price
+      flex-basis: 100%
+      span
+        font-size: 20px
+    &-feature
+      &_third
+        flex-basis: 50%
+// Малые девайсы
+@media (min-width: 576px) and (max-width: 767.98px)
+  .decor
+    &-item
+      font-size: 15px
+    &-items
+      margin: 0
+  .panel
+    margin-top: -80px
+    height: 800px
+    flex-wrap: wrap
+    &-banner
+      display: none
+    &__img
+      flex-basis: 20%
+      margin: 0 auto
+      height: 200px
+    &-features
+      margin-top: -150px
+      flex-basis: 100%
+      margin-left: 0
+    &-price
+      flex-basis: 100%
+      span
+        font-size: 20px
+    &-feature
+      &_third
+        flex-basis: 40%
+// Экстрамалые девайсы
+@media (max-width: 575.98px)
+  .panel
+    height: 400px
+    &-banner
+      display: none
+    &__img
+      flex-basis: 30%
+    &-features
+      flex-basis: 70%
+    &-price
+      flex-basis: 100%
+      span
+        font-size: 20px
+    &-feature
+      &_third
+        flex-basis: 50%
